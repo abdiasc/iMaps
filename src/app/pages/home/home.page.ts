@@ -14,6 +14,8 @@ export class HomePage implements OnInit {
   async ngOnInit() {
     this.lugares = await this.lugarService.obtenerLugares();
   }
+
+  
   
 
 
