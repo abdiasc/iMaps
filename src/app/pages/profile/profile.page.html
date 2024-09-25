@@ -1,13 +1,53 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <ion-title>Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding" style="--overflow: hidden;">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="auto" class="ion-text-center">
+        <ion-img src="assets/svg/user.svg" style="max-width: 150px; border-radius: 50%;"></ion-img>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center">
+        <h2>Nombre de Usuario</h2>
+        <p>correo&#64;example.com</p> <!-- Usar &#64; en lugar de @ -->
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-list>
+          <ion-item>
+            <ion-label>
+              <h2>Configuraciones</h2>
+              <p>Ajustes de cuenta y privacidad</p>
+            </ion-label>
+            <ion-button slot="end" routerLink="/settings" fill="clear">Ir</ion-button>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>
+              <h2>Mis Proyectos</h2>
+              <p>Lista de tus proyectos activos</p>
+            </ion-label>
+            <ion-button slot="end" routerLink="/my-projects" fill="clear">Ir</ion-button>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>
+              <h2>Cerrar Sesión</h2>
+              <p>Salir de tu cuenta</p>
+            </ion-label>
+            <ion-button slot="end" fill="clear" >Salir</ion-button>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LugarService, Lugar } from '../../lugar.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  lugares: Lugar[] = [];
 
-  constructor() { }
+  constructor(private lugarService: LugarService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.lugares = await this.lugarService.obtenerLugares();
   }
+  
+
 
 }

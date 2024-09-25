@@ -1,13 +1,62 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-title>Explora Lugares</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/profile">
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding" style="--overflow: hidden;">
+  <ion-grid>
+    <!-- Área de Publicación -->
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>¿Dónde has estado?</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-textarea placeholder="Comparte tu experiencia..."></ion-textarea>
+            <ion-button expand="full" color="primary">Publicar</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Lugares Recomendados</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item *ngFor="let lugar of lugares" [routerLink]="['/lugar', lugar.id]">
+                <ion-avatar slot="start">
+                  <img [src]="lugar.imagen" />
+                </ion-avatar>
+                <ion-label>
+                  <h2>{{ lugar.nombre }}</h2>
+                  <p>{{ lugar.descripcion }}</p>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Botón para Agregar Nuevos Lugares -->
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-button expand="full" color="secondary" routerLink="/agregar-lugar">
+          Agregar Nuevo Lugar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+

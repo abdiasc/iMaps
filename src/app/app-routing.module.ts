@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LugarDetailPage } from './pages/lugar-detail/lugar-detail.page';
+import { AgregarLugarPage } from './pages/agregar-lugar/agregar-lugar.page';
 
 const routes: Routes = [
   {
@@ -27,6 +29,18 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },
+  {
+    path: 'lugar-detail',
+    loadChildren: () => import('./pages/lugar-detail/lugar-detail.module').then( m => m.LugarDetailPageModule)
+  },
+  {
+    path: 'agregar-lugar',
+    loadChildren: () => import('./pages/agregar-lugar/agregar-lugar.module').then( m => m.AgregarLugarPageModule)
+  },
+
+  { path: 'lugar/:id', component: LugarDetailPage },
+  { path: 'agregar-lugar', component: AgregarLugarPage },
+
 ];
 
 @NgModule({

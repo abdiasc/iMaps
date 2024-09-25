@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="lugar">{{ lugar.nombre }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="lugar" class="ion-padding">
+  <ion-card>
+    <img [src]="lugar.imagen" alt="Imagen del lugar" />
+    <ion-card-header>
+      <ion-card-title>{{ lugar.nombre }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ lugar.descripcion }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
