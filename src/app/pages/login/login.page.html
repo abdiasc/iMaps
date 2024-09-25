@@ -1,0 +1,48 @@
+<ion-content class="ion-padding" [fullscreen]="true" style="--overflow: hidden;">
+  <ion-grid style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="auto" class="ion-text-center">
+        <ion-img src="assets/svg/user.svg" style="max-width: 150px; max-height: 150px;"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-item lines="none">
+          <ion-checkbox slot="start"></ion-checkbox>
+          <ion-label>
+            Recordar cuenta
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="auto">
+        <ion-button color="primary">
+          Iniciar Sesión
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="auto" class="ion-text-center">
+        <p>No tengo una cuenta. <ion-router-link routerLink="/register" color="primary">Crear cuenta</ion-router-link></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
