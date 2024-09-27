@@ -10,3 +10,33 @@ ion-card {
     font-size: 1.2em;
     margin: 0;
 }
+
+.texto-negro {
+  color: black;
+  
+  h2 {
+    color: black;
+  }
+}
+
+ion-card {
+  margin-bottom: 20px; // Espaciado inferior entre tarjetas
+  border-radius: 10px; // Bordes redondeados para la tarjeta
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Sombra suave
+}
+
+ion-item {
+  --background: #f9f9f9; // Fondo más claro para los elementos de la lista
+  --border-radius: 10px; // Bordes redondeados para los elementos de la lista
+  margin: 10px 0; // Espaciado entre elementos de la lista
+  padding: 10px; // Espaciado interno para mayor confort visual
+}
+
+h2 {
+  font-size: 16px; // Ajuste de tamaño de fuente
+  margin: 0; // Elimina márgenes superiores e inferiores
+}
+
+ion-button {
+  margin-left: 10px; // Espaciado a la izquierda del botón
+}
