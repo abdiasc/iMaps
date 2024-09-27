@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LugarService, Lugar } from '../../lugar.service';
+import { LugarService, Lugar } from '../../services/lugar.service';
 import { PublicacionService } from '../../services/publicacion.service'; // Importa el servicio desde la nueva carpeta
 
 @Component({

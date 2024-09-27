@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LugarService, Lugar } from '../../lugar.service';
+import { LugarService, Lugar } from '../../services/lugar.service';
 
 @Component({
   selector: 'app-lugar-detail',
