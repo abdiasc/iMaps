@@ -13,6 +13,7 @@
 <ion-content class="ion-padding">
   <ion-grid>
     <!-- Área de Publicación -->
+    <!-- Área de Publicación -->
     <ion-row>
       <ion-col>
         <ion-card>
@@ -20,8 +21,29 @@
             <ion-card-title>¿Dónde has estado?</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <ion-textarea placeholder="Comparte tu experiencia..."></ion-textarea>
-            <ion-button expand="full" color="primary">Publicar</ion-button>
+            <ion-textarea
+              [(ngModel)]="nuevaPublicacion"
+              placeholder="Comparte tu experiencia..."
+            ></ion-textarea>
+            <ion-button expand="full" color="primary" (click)="agregarPublicacion()">Publicar</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Publicaciones guardadas -->
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Tus publicaciones</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item *ngFor="let publicacion of publicaciones">
+                <ion-label>{{ publicacion }}</ion-label>
+              </ion-item>
+            </ion-list>
           </ion-card-content>
         </ion-card>
       </ion-col>
