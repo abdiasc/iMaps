@@ -107,31 +107,6 @@
       </ion-col>
     </ion-row>
 
-    <!-- Publicaciones guardadas -->
-    <ion-row>
-      <ion-col>
-        <ion-card class="no-padding">
-          <ion-card-header>
-            <ion-card-title>Tus publicaciones</ion-card-title>
-          </ion-card-header>
-
-          <ion-card-content>
-            <ion-list>
-              <ion-item *ngFor="let publicacion of publicaciones; let i = index">
-                <ion-label>
-                  <h2>{{ publicacion.texto }}</h2>
-                  <img *ngIf="publicacion.foto" [src]="publicacion.foto" alt="Foto de publicación" style="border-radius: 10px; max-width: 100%; height: auto;" />
-                </ion-label>
-                <ion-button fill="outline" color="danger" (click)="eliminarPublicacion(i)" slot="end">
-                  <ion-icon name="trash" slot="icon-only"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-list>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
     <!-- Botón para Agregar Nuevos Lugares -->
     <ion-row>
       <ion-col class="ion-text-center">
